@@ -6,6 +6,9 @@ import java.util.List;
 public class Cardapio {
     private List<Prato> prato = new ArrayList<>();
 
+    public Cardapio() {
+    }
+
     public Cardapio(List<Prato> prato) {
         this.prato = prato;
     }
@@ -25,7 +28,7 @@ public class Cardapio {
     @Override
     public String toString() {
       StringBuilder retorno = new StringBuilder();
-      retorno.append("O prato do cardapio é/: "+prato);
+      retorno.append("------------ CARDAPIO:------------ "+prato);
       return retorno.toString();
     }
 }
