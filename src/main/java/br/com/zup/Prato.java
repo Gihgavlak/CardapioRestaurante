@@ -4,11 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Prato {
+
     private String nomeDoPrato;
     private double valorDoPrato;
     private List<Ingredientes> ingredientes = new ArrayList<>();
 
-    public Prato(){
+    public Prato() {
 
     }
 
@@ -37,17 +38,17 @@ public class Prato {
         return ingredientes;
     }
 
-    public void adicionarIngrediente (Ingredientes novoIngredientes){
+    public void adicionarIngrediente(Ingredientes novoIngredientes) {
         ingredientes.add(novoIngredientes);
     }
 
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Nome do prato: "+nomeDoPrato);
-        retorno.append("\n Lista de ingredientes: "+ ingredientes);
-        retorno.append("\n Quantidade de ingredientes: "+ ingredientes.size());
-        retorno.append("\n Valor: "+ valorDoPrato);
+        retorno.append('\n').append(java.util.ResourceBundle.getBundle("strings").getString("DISH_NAME") + nomeDoPrato);
+        retorno.append('\n').append(java.util.ResourceBundle.getBundle("strings").getString("INGREDIENTS_LIST") + ingredientes);
+        retorno.append('\n').append(java.util.ResourceBundle.getBundle("strings").getString("INGREDIENT_QUANTITY") + ingredientes.size());
+        retorno.append('\n').append(java.util.ResourceBundle.getBundle("strings").getString("VALUE") + valorDoPrato);
         return retorno.toString();
 
     }
