@@ -1,7 +1,7 @@
 package br.com.zup;
 
-
 public class Ingredientes {
+
     private String addIngredientes;
 
     public Ingredientes() {
@@ -19,11 +19,10 @@ public class Ingredientes {
         this.addIngredientes = addIngredientes;
     }
 
-
     @Override
     public String toString() {
         StringBuilder retorno = new StringBuilder();
-        retorno.append("\n Ingrediente: "+ addIngredientes);
+        retorno.append('\n').append(java.util.ResourceBundle.getBundle("strings").getString("INGREDIENT") + addIngredientes);
         return retorno.toString();
     }
 }

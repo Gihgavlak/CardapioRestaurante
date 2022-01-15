@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cardapio {
+
     private List<Prato> prato = new ArrayList<>();
 
     public Cardapio() {
@@ -21,14 +22,14 @@ public class Cardapio {
         this.prato = prato;
     }
 
-    public void addPrato (Prato pratoAdd){
+    public void addPrato(Prato pratoAdd) {
         prato.add(pratoAdd);
     }
 
     @Override
     public String toString() {
-      StringBuilder retorno = new StringBuilder();
-      retorno.append("------------ CARDAPIO:------------ "+prato);
-      return retorno.toString();
+        StringBuilder retorno = new StringBuilder();
+        retorno.append(java.util.ResourceBundle.getBundle("strings").getString("MENU_HEADER") + prato);
+        return retorno.toString();
     }
 }
